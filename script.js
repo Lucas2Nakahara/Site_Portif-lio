@@ -16,3 +16,16 @@ link2.addEventListener('click', () => {
     // Role até o segundo elemento com "classe de cabeçalho"
     scrollToElement('.header', 1);
 });
+
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        let imageUrl = card.getAttribute('data-image');
+        card.style.backgroundImage = `url(${imageUrl})`;
+        card.style.backgroundSize = "cover";
+        card.style.backgroundPosition = "center";
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.backgroundImage = "none";
+    });
+});
