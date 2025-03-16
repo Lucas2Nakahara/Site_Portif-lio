@@ -28,6 +28,11 @@ a:hover {
     color: var(--cor-laranja);
 }
 
+html {
+    scroll-behavior: smooth;
+    transition: scroll 0.3s ease-out;
+}
+
 body {
     font-family: var(--font-principal);
     background-color: #18181b;
@@ -307,7 +312,7 @@ section .header {
 
 
 footer {
-    background-color: #202020; 
+    background-image: linear-gradient(to bottom, #2e2e2e, #18181b);
     color: #fff;
     padding: 3rem 2rem;
     display: flex;
@@ -380,6 +385,31 @@ footer {
     color: #888;
     border-top: 1px solid #333;
     margin-top: 2rem;
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 2rem; 
+    left: 2rem;    
+    background-color: #1d4ed8;  
+    color: #fff;  
+    border: none;
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+}
+
+#scrollToTop:hover {
+    background-color: var(--cor-laranja);  
+    transform: scale(1.1);  
+}
+
+#scrollToTop.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 
