@@ -20,12 +20,16 @@ link2.addEventListener('click', () => {
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseenter', () => {
         let imageUrl = card.getAttribute('data-image');
-        card.style.backgroundImage = `url(${imageUrl})`;
-        card.style.backgroundSize = "cover";
-        card.style.backgroundPosition = "center";
+        if (imageUrl) {
+            card.style.backgroundImage = `url(${imageUrl})`;
+            card.style.backgroundSize = "cover";
+            card.style.backgroundPosition = "center";
+            card.style.transition = "background 0.3s ease-in-out";
+        }
     });
 
     card.addEventListener('mouseleave', () => {
-        card.style.backgroundImage = "none";
+        card.style.backgroundImage = "";
     });
 });
+
