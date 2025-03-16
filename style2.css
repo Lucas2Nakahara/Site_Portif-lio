@@ -413,7 +413,6 @@ footer {
 }
 
 
-
 @media (max-width: 900px) {
     .nav-links {
         display: none;
@@ -435,6 +434,7 @@ footer {
         grid-template-columns: 1fr 200px;
     }
 }
+
 @media (max-width: 600px) {
     header .image::before {
         display: none;

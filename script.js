@@ -33,11 +33,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-
-
-
 const scrollToTopButton = document.getElementById("scrollToTop");
-
 
 window.addEventListener("scroll", () => {
     if (window.scrollY > 200) {  
