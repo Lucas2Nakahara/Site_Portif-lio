@@ -13,25 +13,26 @@ link1.addEventListener('click', () => {
     scrollToElement('.header');
 });
 link2.addEventListener('click', () => {
-    // Role até o segundo elemento com "classe de cabeçalho"
     scrollToElement('.header', 1);
 });
 
+//Cards para levar para os outros sites do meu portifólio
 document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        let imageUrl = card.getAttribute('data-image');
-        if (imageUrl) {
-            card.style.backgroundImage = `url(${imageUrl})`;
-            card.style.backgroundSize = "cover";
-            card.style.backgroundPosition = "center";
-            card.style.transition = "background 0.3s ease-in-out";
-        }
+    let imageUrl = card.getAttribute('data-image');
+    card.style.setProperty('--bg-image', `url(${imageUrl})`);
+
+    card.addEventListener('click', () => {
+        card.classList.toggle('active'); 
     });
 
-    card.addEventListener('mouseleave', () => {
-        card.style.backgroundImage = "";
+    card.querySelector('.overlay .btn').addEventListener('click', (event) => {
+        event.stopPropagation();
     });
 });
+
+
+
+
 
 const scrollToTopButton = document.getElementById("scrollToTop");
 
