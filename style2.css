@@ -204,6 +204,7 @@ section .header {
 
 .features .card {
     background-color: #27272a;
+    color: #fff;
     padding: 1rem;
     border: 2px solid transparent;
     border-radius: 15px;
@@ -269,7 +270,7 @@ section .header {
 
 .project-card:hover .overlay {
     opacity: 1;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.781);
 }
 
 .project-card .overlay {
