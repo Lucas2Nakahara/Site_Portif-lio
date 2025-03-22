@@ -314,9 +314,17 @@ section .header {
     background-color: #d65a00;
 }
 
+.hero_container p {
+    text-align: center;
+    font-size: 12rem;
+    font-weight: 700;
+    background-image: url(imagens/360_F_498231018_6w6Zt0h2PdU4Muy5Tvph2VeNG67yTuwl.jpg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--extra-ligth);
+}
 
-
-
+/*footer*/
 footer {
     background-image: linear-gradient(to bottom, #2e2e2e, #18181b);
     color: #fff;
