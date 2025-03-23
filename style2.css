@@ -243,7 +243,7 @@ section .header {
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -255,7 +255,7 @@ section .header {
     align-items: center;
     background-color: #27272a; 
     transition: background 0.3s ease-in-out;
-    min-height: 300px;
+    min-height: 390px;
     border-radius: 15px; 
     overflow: hidden; 
 }
